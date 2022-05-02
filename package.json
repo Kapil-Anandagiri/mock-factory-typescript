@@ -1,0 +1,35 @@
+{
+  "name": "mock-factory-typescript",
+  "version": "1.0.0",
+  "description": "Mock Factory for Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare":"npm run build",
+    "prepublishOnly":"npm run lint && npm run test",
+    "preversion":"npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion":"git push && git push --tags"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kapil-Anandagiri/mock-factory-typescript.git"
+  },
+  "keywords": ["Mock Factory", "Mock-Factory-Typescript"],
+  "author": "A K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kapil-Anandagiri/mock-factory-typescript/issues"
+  },
+  "homepage": "https://github.com/Kapil-Anandagiri/mock-factory-typescript#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.4"
+  }
+}
